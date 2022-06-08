@@ -38,11 +38,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // Mengambil nilai variabel dari activity layout
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerview)
         val adapter = WordListAdapter()
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(this)
 
+        // Jika tombol ini diklik maka akan menjalankan blok kode di dalamnya
         val fab = findViewById<FloatingActionButton>(R.id.fab)
         fab.setOnClickListener {
             val intent = Intent(this@MainActivity, NewWordActivity::class.java)
